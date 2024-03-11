@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>Boost Your Direct Bookings - Travel World</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            max-width: 750px;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            margin: 0 auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        ::-webkit-scrollbar {
+    width: 8px;    
+}
+::-webkit-scrollbar-thumb {
+    background: #c0b6b6;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a7a1a1;
+}
+        .reserve {
+            position: absolute; /* Set reserve section to absolute positioning */
+            background-color: rgb(0, 0, 0); /* Semi-transparent background */
+            text-align: center;
+            padding: 1.6rem;
+            border-radius: 10px;
+            width: 100%; /* Adjust width as needed */
+            color: white;
+            z-index: 1; /* Make sure the reserve section is on top */
+            top: 5%; /* Position from the top */
+            left: 50%; /* Position from the left */
+            transform: translate(-50%, -50%); /* Center horizontally and vertically */
+        }
+
+        .banner_img {
+            position: relative; /* Set banner image to relative positioning */
+            width: 100%;
+            z-index: 0; /* Lower z-index to keep it below the reserve section */
+        }
+
+        .banner_img img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            height: 47vh;
+        }
+
+        .content {
+            display: flex;
+    position: relative;
+    font-size: 28px;
+    bottom: 26vh;
+}
+
+.content div {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+        .first, .second{
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .margin-top-custom{
+            margin-top: -6rem;
+        }
+        .overflow-ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .button {
+            position: sticky;
+    height: 110px;
+    width: 100%;
+    border: none;
+    background-color: rgb(10, 184, 117);
+    color: white;
+    outline: none;
+    font-size: 41px;
+    bottom: 0;
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+        .black{
+            color: black;
+    font-weight: 600;
+    position: absolute;
+    z-index: 3;
+    margin-top: -16vh;
+    padding: 0 15px;
+        }
+        .price{
+          font-size: 18px;
+          border-radius: 10px;
+            font-weight: 600;
+            color: red;
+            margin-bottom: 10px;
+            width: 78px;
+            padding: 0 30px;
+            font-size: 20px;
+            display: flex;
+            margin-left: 80%;
+            justify-content: center;
+        }
+            /* breakpoints */
+            @media screen and (max-width: 40.75rem) {
+            .content {
+                font-size: 20px;
+    bottom: 26vh;
+    gap: .625rem;
+            }
+            .button{
+                font-size: 33px;
+    height: 64px;
+            }
+            .price{
+              font-size: 18px;
+              border-radius: 10px;
+            font-weight: 600;
+            color: red;
+            margin-bottom: 10px;
+            width: 78px;
+            padding: 0 30px;
+            font-size: 20px;
+            display: flex;
+            margin-left: 76%;
+            justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 26.625rem) {
+            .content {
+                font-size: 20px;
+    bottom: 26vh;
+    gap: .625rem;
+            }
+            .button{
+                font-size: 25px;
+    height: 50px;
+            }
+        }
+        .price{
+          font-size: 18px;
+            font-weight: 600;
+            color: red;
+            margin-bottom: 10px;
+            width: 78px;
+            padding: 0 10px;
+            font-size: 20px;
+            display: flex;
+            margin-left: 76%;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 21.25rem) {
+            .content {
+                font-size: 16px;
+    bottom: 26vh;
+    gap: .625rem;
+            }
+            .first, .second{
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .banner_img img {
+             height: 37vh;   
+            }
+            .button{
+                font-size: 18px;
+    height: 45px;
+            }
+            .icon{
+            font-size: 40px;
+          }
+          .main_heading{
+            font-size: 20px;
+          }
+        }
+        .price{
+            font-size: 18px;
+            font-weight: 600;
+            color: red;
+            margin-bottom: 10px;
+            width: 78px;
+            padding: 0 10px;
+            font-size: 20px;
+            display: flex;
+            margin-left: 76%;
+            justify-content: center;
+        }
+        .icon{
+          display: flex;
+    position: absolute;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    top: 11px;
+        }
+        .icon a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="banner_img">
+        <img src="https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg" alt="">
+    </div>
+    <div class="reserve">
+        <div class="icon">
+            <a href="mainpage.html"><i class='bx bx-left-arrow-alt '></i>  </a>      </div>
+         <h1 class="main_heading"> Reserve</h1>
+    </div>
+    <div class="content">
+        <div class="first-content">
+            <h3 class="first">Account Balance</h3>
+            <span class="first">USDT 1836.28</span>
+            <h3 class="second ">Deals Of Day</h3>
+            <span class="second">50</span>
+        </div>
+        <div class="second">
+            <h3 class="first">Commission</h3>
+            <span class="first">USDT 136.28</span>
+            <h3 class="second">Deals Completed</h3>
+            <span class="second">16</span>
+        </div>
+    </div>
+    <h1 class="black">Explore Hotels</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4 margin-top-custom">
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhdGlmdWwlMjBiZWRyb29tfGVufDB8fDB8fHww" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title overflow-ellipsis">Horseshoe Las Vegas</h5>
+              <p class="card-text overflow-ellipsis">Horseshoe Las Vegas4-star resort near The Linq.Located close to Grand Bazaar Shops and Las Vegas Eiffel Tower, Horseshoe Las Vegas …            </p>
+            </div>
+            <button class="price">100$</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmVhdGlmdWwlMjBiZWRyb29tfGVufDB8fDB8fHww" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title overflow-ellipsis">Park MGM</h5>
+              <p class="card-text overflow-ellipsis">4-star eco-certified resort near Bellagio Casino.Located close to Dolby Live and MGM Grand Garden Arena, Park MGM Las Vegas provides a …            </p>
+            </div>
+            <button class="price">100$</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGJlYXRpZnVsJTIwYmVkcm9vbXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title overflow-ellipsis">SAHARA</h5>
+              <p class="card-text overflow-ellipsis">SAHARA Las Vegas is located close to Sahara Las Vegas Casino and Casino at Circus Circus, and provides a casino, 3 poolside bars, and concerts …
+            </p>
+            <button class="price">400$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card rounded-4">
+            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGJlYXRpZnVsJTIwYmVkcm9vbXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title overflow-ellipsis">The Venetian Resort</h5>
+              <p class="card-text overflow-ellipsis">5-star luxury resort near Treasure Island Casino.Located close to The Venetian Expo Center and Fashion Show Mall, The Venetian Resort Las …            </p>
+            </div>
+            <button class="price">700$</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGJlYXRpZnVsJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title overflow-ellipsis">Jet Luxury At The Vdara Condo Hotel </h5>
+              <p class="card-text overflow-ellipsis">4.5-star luxury hotel near Bellagio Casino.Near The Cosmopolitan Casino and Colosseum at Caesars Palace, Jet Luxury at the Vdara Condo Hotel …            </p>
+            </div>
+            <button class="price">400$</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGJlYXRpZnVsJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title overflow-ellipsis">Caesars Palace</h5>
+              <p class="card-text overflow-ellipsis">4.5-star luxury resort near The Linq.Located close to Colosseum at Caesars Palace and LINQ Promenade, Caesars Palace provides a casino, a …</p>
+            </div>
+            <button class="price">900$</button>
+          </div>
+        </div>
+    </div>
+    <button class="button" type="button"><a href="">Resever</a></button>
+</main>
+</body>
+</html>

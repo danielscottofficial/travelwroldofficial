@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>Boost Your Direct Bookings - Travel World</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" id="mobile-simulator">
+        window.hasMobileFirstExtension = true;
+    </script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="left-menu">
+        <div class="profile-card">
+            <div class="profile_content">
+            <div class="avatar">
+            </div>
+            <div class="profile-info">
+                    <div class="id"><span>id</span></div> 
+                    <div class="invitation-code"><span>Invitation Code: </span>
+                        <br>
+                        <span class="main_code" style="font-size: 30px;">9S7JDL  <button class="copy_btn btn">
+                            <i class="bx bx-copy"></i>
+                        </button></span></div> 
+                </div>
+            </div>
+          <div class="two_text_important">
+            <div class="first_important">
+                <h2 style="font-weight: 600;">USDT 1836.28</h2>
+                <h3 style="font-weight: 500;">Account Balance</h3>
+            </div>
+            <hr>
+            <div class="second_important">
+            <h2 style="font-weight: 600;">USDT 136.28</h2>
+            <h3 style="font-weight: 500;">Commission</h3>
+            </div>
+          </div>
+        </div>
+        <div class="menu-links" >
+            <ul>
+                <li><a href="TRC.html"><i class='bx bxs-book' ></i> T&C</li></a>
+                <li><a href="Faqs.html"><i class="fa fa-question-circle"></i>
+                    Faqs</li></a>
+                <li><a href="intro.html"><i class="fa fa-info-circle"></i>
+                    intro</li></a>
+                <li><a href="liveChat.html"><i class="fa fa-comment"></i>
+                    Live Chat</li></a>
+            </ul>
+            <button class="logout_btn" onclick="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+            </div>
+    </div>
+    <div class="overlay"></div> <!-- Add this overlay div -->
+    <main>
+        <div id="main">
+            <div class="banner-img">
+                <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/22/2017/04/Mauritius-St-Regis-Hotel-Front-630x354.jpg" alt="">
+                <div class="top-items">
+                    <div class="left_slide_navbar"> 
+                        <div class="nav-toggler">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="customer-support_link">
+                        <a href="#" class="customer-support"><img src="data:image/png;base64,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" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_menus">
+                <div class="tabs">
+                    <div class="tab" id="withdrawl">
+                        <a href="#" class="tab_link active">Withdrawl</a>
+                    </div>
+                    <div class="tab" id="deposit">
+                        <a href="#" class="tab_link">Deposit</a>
+                    </div>
+                    <div class="tab" id="level">
+                        <a href="#" class="tab_link">Level</a>
+                    </div>
+                    <div class="tab" id="contact">
+                        <a href="#" class="tab_link">Live Chat</a>
+                    </div>
+                </div>
+            </div>
+
+           
+          
+
+
+            <!-- Balance From -->
+            <div class="blance_form">
+                <!-- Withdrawl -->
+                <form action="" class="withdrawl">
+                    <div class="trc_20 infom"> your TRC 20 Address ↓</div>
+                    <input type="text" placeholder="Enter your TRC 20 Address" class="trc_20 address">
+                    <input type="email" placeholder="Email" class="trc_20 email">
+                    <p class="Warning">Only paste your TRC 20USDT address. If you paste another chain address, you may lose your funds. For more details, contact customer support.</p>
+                    <button type="submit" class="trc_20-btn">Submit</button>
+                </form>
+                
+                
+                <!-- Deposit -->
+                <form action="" class="deposit">
+                    <span class="deposit_text">TRC 20 Address</span>
+                    <input type="text" id="copyContent" value="TExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" class="trc_20 address trc_20-deposit" readonly>
+                   <button class="copy"><i class='bx bx-copy copy-icon'></i></button>
+                    <p class="Warning">Only tranfer funds through trc20 chain if you use other chain you can lose your funds, Must contact customer care and share the recipt with customer care after transfer</p>
+                    <button type="submit" class="trc_20-btn">Submit</button>
+                </form>
+            </div> 
+
+  
+
+
+            <!-- Level -->
+
+           <div class="cardes_container level">
+                <div class="level-card level_card1" style="background-color: white;">
+                    <div class="level_content">
+                        <div class="level_img">
+                            <img src="cdn/VIP1.8629b4d8.png" alt="">
+                        </div>
+                        <div class="level_name">
+                            <h3>Normal</h3>
+                            <span>0.70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-card level_card2">
+                    <img class="lock_img" src="cdn/lock.png" alt="">
+                    <div class="level_content">
+                        <div class="level_img">
+                            <img src="cdn/VIP2.4e27995e.png" alt="">
+                        </div>
+                        <div class="level_name">
+                            <h3 style="color: #B2B2BD;">Senior</h3>
+                            <span style="color: #B2B2BD;">1.10%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-card level_card3">
+                    <img class="lock_img" src="cdn/lock.png" alt="">
+                    <div class="level_content">
+                        <div class="level_img">
+                            <img src="cdn/VIP3.f5513935.png" alt="">
+                        </div>
+                        <div class="level_name">
+                            <h3 style="color: #B2B2BD;">Expert</h3>
+                            <span style="color: #B2B2BD;">1.50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-card level_card4">
+                    <img class="lock_img" src="cdn/lock.png" alt="">
+                    <div class="level_content">
+                        <div class="level_img">
+                            <img src="cdn/VIP4.c8b1abcd.png" alt="">
+                        </div>
+                        <div class="level_name">
+                            <h3 style="color: #B2B2BD;">Supreme</h3>
+                            <span style="color: #B2B2BD;">2.00%</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Live Chat -->
+
+            <div class="contact">
+                <p class="contact_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, cumque.</p>
+                <button type="button" class="block"><a href="" class="contact_btn_link" style="text-decoration: none; color: white;">Live Chat <i class="bx bxs-chat"></i> </a></button>
+            </div> 
+                    <div class="hotels">
+                        <div class="hotel" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="hotel_img">
+                                <img src="https://www.nomadicmatt.com/wp-content/uploads/2011/12/francescoshostel2.jpg" alt="">
+                            </div>
+                            <div class="hotel_info">
+                                <div class="hotel_name">
+                                    <h3>Los Patios (Medellin, Colombia)</h3>
+                                </div>
+                                <div class="hotel_location">
+                                    <p>This stylish hostel has themed floors inspired by Colombia’s natural surroundings</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel">
+                            <div class="hotel_img">
+                                <img src="https://media.nomadicmatt.com/2022/kabulbcn.jpg" alt="">
+                            </div>
+                            <div class="hotel_info">
+                                <div class="hotel_name">
+                                    <h3>Kabul (Barcelona, Spain)</h3>
+                                </div>
+                                <div class="hotel_location">
+                                    <p>Arguably one of the best hostels in the world, Kabul is just an all-out fun-filled place, but only if you are looking to spend your nights partying</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel">
+                            <div class="hotel_img">
+                                <img src="https://media.nomadicmatt.com/2018/lespiaules.jpg" alt="">
+                            </div>
+                            <div class="hotel_info">
+                                <div class="hotel_name">
+                                    <h3>Paris Belleville </h3>
+                                </div>
+                                <div class="hotel_location">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel">
+                            <div class="hotel_img">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+                            </div>
+                            <div class="hotel_info">
+                                <div class="hotel_name">
+                                    <h3>Marigot Bay Marina</h3>
+                                </div>
+                                <div class="hotel_location">
+                                    <p>Located in Paris’s Belleville neighborhood, this hostel is in a beautifully renovated art deco building.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-content">
+                            <li class="nav-list">
+                                <a href="mainpage.html" class="link-item active">
+                                    <i class='bx bxs-home link-icon'></i>
+                                    <span class="link-text">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-list">
+                                <a href="Reserve.html" class="link-item">
+                                    <i class='bx bxs-plane-alt link-icon'></i>
+                                    <span class="link-text">Reserve</span>
+                                </a>
+                            </li>
+                            <li class="nav-list">
+                                <a href="wallet.html" class="link-item">
+                                    <i class='bx bxs-wallet link-icon'></i>
+                                    <span class="link-text">Wallet</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

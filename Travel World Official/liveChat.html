@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title>Boost Your Direct Bookings - Travel World</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            max-width: 750px;
+            height: 100vh;
+            position: relative;
+            margin: 0 auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            color: rgb(0, 0, 0);
+            color: rgba(228, 225, 225, 0.863);
+            background: url('https://img.freepik.com/free-vector  dark-gradient-background-with-copy-space_53876-99548.jpg');  
+            background-size: cover;
+            
+            font-family: 'Poppins', sans-serif;
+        }
+        .reserve {
+            position: absolute; /* Set reserve section to absolute positioning */
+            background-color: rgb(0, 0, 0); /* Semi-transparent background */
+            text-align: center;
+            padding: 1.6rem;
+            border-radius: 10px;
+            width: 100%; /* Adjust width as needed */
+            color: white;
+            z-index: 1; /* Make sure the reserve section is on top */
+            top: 5%; /* Position from the top */
+            left: 50%; /* Position from the left */
+            transform: translate(-50%, -50%); /* Center horizontally and vertically */
+        }
+
+        .banner_img {
+            width: 100%;
+            height: 100vh; /* Lower z-index to keep it below the reserve section */
+            background: url('https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg');;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            z-index: 0;
+        }
+        .icon{
+            display: flex;
+    position: absolute;
+    font-size: 65px;
+    align-items: center;
+    justify-content: center;
+    top: -0px;
+        }
+        .icon a{
+            text-decoration: none;
+            color: white;
+        }
+.center_text{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customer-support{
+    color: white;
+}
+.button {
+    height: 147px;
+    width: 69%;
+    border: none;
+    background-color: rgb(10, 184, 117);
+    color: white;
+    outline: none;
+    font-size: 30px;
+}
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+        p{
+            font-size: 20px;
+            color: white;
+            width: 100%;
+        }
+  /* breakpoints */
+  @media screen and (max-width: 40.75rem) {
+          .button{
+            font-size: 20px;
+            height: 117px;
+          }
+        }
+
+        @media screen and (max-width: 21.25rem) {
+            .button{
+            font-size: 14px;
+            height: 80px;
+          }
+          .center_text{
+            font-size: 13px;
+          }
+          .customer-support{
+            font-size: 13px;
+          }
+           p{
+            font-size: 12px;
+          }
+          .icon{
+            font-size: 40px;
+          }
+          .main_heading{
+            font-size: 20px;
+          }
+        }
+        
+    </style>
+
+</head>
+<body>
+<main>
+    <div class="banner_img">
+    </div>
+    <div class="reserve">
+        <div class="icon">
+            <a href="mainpage.html"><i class='bx bx-left-arrow-alt '></i>  </a>      </div>
+         <h1 class="main_heading">Customer support</h1>
+    </div>
+<div class="center_text">
+    <h1 class="customer-support">Contact With Customer Support</h1>
+    <p>Message us for an instant response or to connect to a specialist</p>
+    <button type="button" class="btn btn-primary btn-lg button">
+        Contact us with WhatsApp
+        <br>
+        Agency Service Operation Time: 11:00-23:00</button>
+
+</div>
+</main>
+</body>
+</html>
